@@ -1,0 +1,27 @@
+{
+  "engineId": "ecommerce_electronic_pv_10k",
+  "engineFactory": "com.actionml.engines.ur.UREngine",
+  "sparkConf": {
+    "master": "local",
+    "spark.driver.memory": "10g",
+    "spark.executor.memory": "20g",
+    "spark.es.index.auto.create": "true",
+    "spark.es.nodes": "elasticsearch",
+    "spark.es.nodes.wan.only": "true",
+    "spark.kryo.referenceTracking": "false",
+    "spark.kryo.registrator": "org.apache.mahout.sparkbindings.io.MahoutKryoRegistrator",
+    "spark.kryoserializer.buffer": "300m",
+    "spark.serializer": "org.apache.spark.serializer.KryoSerializer"
+  },
+  "algorithm": {
+    "indicators": [
+      {
+        "name": "purchase"
+      },
+      {
+        "name": "view"
+      }
+    ],
+    "num": 4
+  }
+}
